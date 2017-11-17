@@ -16,7 +16,6 @@ import java.util.List;
 
 /**
  * @author sciore
- *
  */
 public class SortScan implements Scan {
     private UpdateScan s1, s2 = null, currentscan = null;
@@ -28,6 +27,7 @@ public class SortScan implements Scan {
      * Creates a sort scan, given a list of 1 or 2 runs.
      * If there is only 1 run, then s2 will be null and
      * hasmore2 will be false.
+     *
      * @param runs the list of runs
      * @param comp the record comparator
      */
@@ -46,6 +46,7 @@ public class SortScan implements Scan {
      * Internally, it moves to the first record of each underlying scan.
      * The variable currentscan is set to null, indicating that there is
      * no current scan.
+     *
      * @see simpledb.query.Scan#beforeFirst()
      */
     public void beforeFirst() {
@@ -63,6 +64,7 @@ public class SortScan implements Scan {
      * First, the current scan is moved to the next record.
      * Then the lowest record of the two scans is found, and that
      * scan is chosen to be the new current scan.
+     *
      * @see simpledb.query.Scan#next()
      */
     public boolean next() {
@@ -89,6 +91,7 @@ public class SortScan implements Scan {
 
     /**
      * Closes the two underlying scans.
+     *
      * @see simpledb.query.Scan#close()
      */
     public void close() {
@@ -100,6 +103,7 @@ public class SortScan implements Scan {
     /**
      * Gets the Constant value of the specified field
      * of the current scan.
+     *
      * @see simpledb.query.Scan#getVal(java.lang.String)
      */
     public Constant getVal(String fldname) {
@@ -109,6 +113,7 @@ public class SortScan implements Scan {
     /**
      * Gets the integer value of the specified field
      * of the current scan.
+     *
      * @see simpledb.query.Scan#getInt(java.lang.String)
      */
     public int getInt(String fldname) {
@@ -118,6 +123,7 @@ public class SortScan implements Scan {
     /**
      * Gets the string value of the specified field
      * of the current scan.
+     *
      * @see simpledb.query.Scan#getString(java.lang.String)
      */
     public String getString(String fldname) {
@@ -126,6 +132,7 @@ public class SortScan implements Scan {
 
     /**
      * Returns true if the specified field is in the current scan.
+     *
      * @see simpledb.query.Scan#hasField(java.lang.String)
      */
     public boolean hasField(String fldname) {

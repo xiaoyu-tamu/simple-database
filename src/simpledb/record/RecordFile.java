@@ -4,9 +4,8 @@ import simpledb.file.Block;
 import simpledb.tx.Transaction;
 
 /**
- * Manages a file of records.
- * There are methods for iterating through the records
- * and accessing their contents.
+ * Manages a file of records. There are methods for iterating through the
+ * records and accessing their contents.
  *
  * @author Edward Sciore
  */
@@ -18,8 +17,8 @@ public class RecordFile {
     private int currentblknum;
 
     /**
-     * Constructs an object to manage a file of records.
-     * If the file does not exist, it is created.
+     * Constructs an object to manage a file of records. If the file does not exist,
+     * it is created.
      *
      * @param ti the table metadata
      * @param tx the transaction
@@ -41,16 +40,15 @@ public class RecordFile {
     }
 
     /**
-     * Positions the current record so that a call to method next
-     * will wind up at the first record.
+     * Positions the current record so that a call to method next will wind up at
+     * the first record.
      */
     public void beforeFirst() {
         moveTo(0);
     }
 
     /**
-     * Moves to the next record. Returns false if there
-     * is no next record.
+     * Moves to the next record. Returns false if there is no next record.
      *
      * @return false if there is no next record.
      */
@@ -64,9 +62,35 @@ public class RecordFile {
         }
     }
 
+    //************************************************************************
+
     /**
-     * Returns the value of the specified field
-     * in the current record.
+     * Moves to the previous record
+     *
+     * @return false if there is no next record.
+     */
+    public boolean previous() {
+        while (true) {
+            if (rp.previous())
+                return true;
+            if (atFirstBlock())
+                return false;
+            moveTo(currentblknum - 1);
+        }
+    }
+
+    private boolean atFirstBlock() {
+        return currentblknum == 0;
+    }
+
+    //************************************************************************
+
+    public void afterLast() {
+        moveTo(tx.size(filename) - 1);
+    }
+
+    /**
+     * Returns the value of the specified field in the current record.
      *
      * @param fldname the name of the field
      * @return the integer value at that field
@@ -76,8 +100,7 @@ public class RecordFile {
     }
 
     /**
-     * Returns the value of the specified field
-     * in the current record.
+     * Returns the value of the specified field in the current record.
      *
      * @param fldname the name of the field
      * @return the string value at that field
@@ -87,8 +110,7 @@ public class RecordFile {
     }
 
     /**
-     * Sets the value of the specified field
-     * in the current record.
+     * Sets the value of the specified field in the current record.
      *
      * @param fldname the name of the field
      * @param val     the new value for the field
@@ -98,8 +120,7 @@ public class RecordFile {
     }
 
     /**
-     * Sets the value of the specified field
-     * in the current record.
+     * Sets the value of the specified field in the current record.
      *
      * @param fldname the name of the field
      * @param val     the new value for the field
@@ -109,21 +130,17 @@ public class RecordFile {
     }
 
     /**
-     * Deletes the current record.
-     * The client must call next() to move to
-     * the next record.
-     * Calls to methods on a deleted record
-     * have unspecified behavior.
+     * Deletes the current record. The client must call next() to move to the next
+     * record. Calls to methods on a deleted record have unspecified behavior.
      */
     public void delete() {
         rp.delete();
     }
 
     /**
-     * Inserts a new, blank record somewhere in the file
-     * beginning at the current record.
-     * If the new record does not fit into an existing block,
-     * then a new block is appended to the file.
+     * Inserts a new, blank record somewhere in the file beginning at the current
+     * record. If the new record does not fit into an existing block, then a new
+     * block is appended to the file.
      */
     public void insert() {
         while (!rp.insert()) {
@@ -134,8 +151,7 @@ public class RecordFile {
     }
 
     /**
-     * Positions the current record as indicated by the
-     * specified RID.
+     * Positions the current record as indicated by the specified RID.
      *
      * @param rid a record identifier
      */

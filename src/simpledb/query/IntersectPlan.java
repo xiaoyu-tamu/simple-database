@@ -16,9 +16,9 @@ public class IntersectPlan implements Plan {
     public Scan open() {
         Scan more = p1.open();
         Scan less = p2.open();
-        if(p1.recordsOutput() < p2.recordsOutput()) {
-        		more = p2.open();
-        		less = p1.open();
+        if (p1.recordsOutput() < p2.recordsOutput()) {
+            more = p2.open();
+            less = p1.open();
         }
         return new IntersectScan(more, less, schema.fields());
     }
@@ -28,11 +28,11 @@ public class IntersectPlan implements Plan {
     }
 
     public int recordsOutput() {
-    		return Math.min(p1.recordsOutput(), p2.recordsOutput());
+        return Math.min(p1.recordsOutput(), p2.recordsOutput());
     }
 
     public int distinctValues(String fldname) {
-    		return p1.distinctValues(fldname) + p2.distinctValues(fldname);
+        return p1.distinctValues(fldname) + p2.distinctValues(fldname);
     }
 
     public Schema schema() {

@@ -4,7 +4,29 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35bdad84-827f-407f-a0e6-c9c7ed616827" name="Default" comment="" />
+    <list default="true" id="35bdad84-827f-407f-a0e6-c9c7ed616827" name="Default" comment="[update] add old files">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/file/FileMgr.java" afterPath="$PROJECT_DIR$/src/simpledb/file/FileMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/file/Page.java" afterPath="$PROJECT_DIR$/src/simpledb/file/Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/materialize/SortScan.java" afterPath="$PROJECT_DIR$/src/simpledb/materialize/SortScan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/metadata/MetadataMgr.java" afterPath="$PROJECT_DIR$/src/simpledb/metadata/MetadataMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/metadata/TableMgr.java" afterPath="$PROJECT_DIR$/src/simpledb/metadata/TableMgr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/query/IntersectPlan.java" afterPath="$PROJECT_DIR$/src/simpledb/query/IntersectPlan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/query/IntersectScan.java" afterPath="$PROJECT_DIR$/src/simpledb/query/IntersectScan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/record/RID.java" afterPath="$PROJECT_DIR$/src/simpledb/record/RID.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/record/RecordFile.java" afterPath="$PROJECT_DIR$/src/simpledb/record/RecordFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/record/RecordFormatter.java" afterPath="$PROJECT_DIR$/src/simpledb/record/RecordFormatter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/record/RecordPage.java" afterPath="$PROJECT_DIR$/src/simpledb/record/RecordPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/record/Schema.java" afterPath="$PROJECT_DIR$/src/simpledb/record/Schema.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/record/TableInfo.java" afterPath="$PROJECT_DIR$/src/simpledb/record/TableInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/tests/TestFileMgr2.java" afterPath="$PROJECT_DIR$/src/simpledb/tests/TestFileMgr2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/tests/TestIntersectPlan.java" afterPath="$PROJECT_DIR$/src/simpledb/tests/TestIntersectPlan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/tests/TestProductPlan.java" afterPath="$PROJECT_DIR$/src/simpledb/tests/TestProductPlan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/tests/TestQuery.java" afterPath="$PROJECT_DIR$/src/simpledb/tests/TestQuery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/tests/TestRecordMgmt.java" afterPath="$PROJECT_DIR$/src/simpledb/tests/TestRecordMgmt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpledb/tests/TestTableMgr.java" afterPath="$PROJECT_DIR$/src/simpledb/tests/TestTableMgr.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +36,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -30,6 +55,9 @@
         <option value="$PROJECT_DIR$/src/tests/TestQuery.java" />
         <option value="$PROJECT_DIR$/src/simpledb/tests/TestQuery.java" />
         <option value="$PROJECT_DIR$/src/simpledb/remote/RemoteResultSetImpl.java" />
+        <option value="$PROJECT_DIR$/src/simpledb/tests/TestRecordMgmt.java" />
+        <option value="$PROJECT_DIR$/src/simpledb/tests/TestFileMgr2.java" />
+        <option value="$PROJECT_DIR$/src/simpledb/file/Page.java" />
       </list>
     </option>
   </component>
@@ -79,8 +107,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,6 +126,20 @@
               <item name="simple-database" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="simpledb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-database" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="simpledb" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple-database" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple-database" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="simpledb" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -131,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.student.create">
+  <component name="RunManager" selected="Application.server.start">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -241,12 +283,12 @@
     <frame x="0" y="36" width="1400" height="838" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -265,6 +307,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[update] add old files" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] add old files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -304,10 +350,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/simpledb/tests/TestRecordMgmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="118" column="14" lean-forward="false" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simpledb/file/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="177" column="5" lean-forward="false" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/simpledb/server/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simpledb/tests/TestFileMgr2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding />
         </state>
       </provider>

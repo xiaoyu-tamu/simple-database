@@ -5,8 +5,6 @@ import simpledb.server.SimpleDB;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 
-import simpledb.file.BOOLEAN;
-import simpledb.file.BOOLEAN2;
 
 /**
  * The contents of a disk block in memory.
@@ -57,6 +55,7 @@ public class Page {
     public static final int INT_SIZE = Integer.SIZE / Byte.SIZE;
     private ByteBuffer contents = ByteBuffer.allocateDirect(BLOCK_SIZE);
     private FileMgr filemgr = SimpleDB.fileMgr();
+
     /**
      * Creates a new page.  Although the constructor takes no arguments,
      * it depends on a {@link FileMgr} object that it gets from the
@@ -192,18 +191,6 @@ public class Page {
         return new BOOLEAN(str);
     }
 
-    public synchronized BOOLEAN2 getBoolean2(int offset) {
-        contents.position(offset);
-        // get data length
-        int len = contents.getInt();
-        byte[] byteval = new byte[len];
-        // put data in the page(RAM)
-        contents.get(byteval);
-        // convert java byte value into string
-        String str = new String(byteval);
-        // construct BOOLEAN2 and return
-        return new BOOLEAN2(str);
-    }
 
     public synchronized void setBoolean(int offset, String val) {
         contents.position(offset);

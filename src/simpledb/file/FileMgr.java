@@ -1,11 +1,14 @@
 package simpledb.file;
 
-import static simpledb.file.Page.BLOCK_SIZE;
-
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import static simpledb.file.Page.BLOCK_SIZE;
 
 /**
  * The SimpleDB file manager.
@@ -195,23 +198,23 @@ public class FileMgr {
         readTotalTime = 0;
         writeTotalTime = 0;
     }
-    
-    
+
+
     /***************************************************
      * START HW 8
      ***************************************************/
     public void deleteFile(String filename) {
-    		
-    		File f = new File(dbDirectory + "/" + filename + ".tbl");
-        if(f.delete()) {
+
+        File f = new File(dbDirectory + "/" + filename + ".tbl");
+        if (f.delete()) {
 //            System.out.println("\nFile deleted successfully\n");
-        }
-        else {
+        } else {
             System.out.println("\nFailed to delete the file\n");
         }
-        openFiles.remove(filename+".tbl");
+        openFiles.remove(filename + ".tbl");
 
     }
     /***************************************************
      * END HW 8
-     ***************************************************/}
+     ***************************************************/
+}

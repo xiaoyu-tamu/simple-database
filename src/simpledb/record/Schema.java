@@ -130,6 +130,7 @@ public class Schema {
         return info.get(fldname).length;
     }
 
+
     class FieldInfo {
         int type, length;
 

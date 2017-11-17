@@ -21,8 +21,8 @@ public class RecordPage {
     private int currentslot = -1;
 
     /**
-     * Creates the record manager for the specified block.
-     * The current record is set to be prior to the first one.
+     * Creates the record manager for the specified block. The current record is set
+     * to be prior to the first one.
      *
      * @param blk a reference to the disk block
      * @param ti  the table's metadata
@@ -54,10 +54,45 @@ public class RecordPage {
     public boolean next() {
         return searchFor(INUSE);
     }
+    //************************************************************************
 
     /**
-     * Returns the integer value stored for the
-     * specified field of the current record.
+     * Xiaoyu Li Moves to the previous record in the block.
+     *
+     * @return false if there is no previous record.
+     */
+    public boolean previous() {
+        return mySearchFor(INUSE);
+    }
+
+
+    private boolean myIsValidSlot() {
+        return currentpos() >= 0;
+    }
+
+    private boolean mySearchFor(int flag) {
+        if (currentslot == -1) {
+            // at first time, initial current slot to last index.
+            currentslot = (BLOCK_SIZE / slotsize);
+        } else {
+            currentslot--;
+        }
+
+        while (myIsValidSlot()) {
+            int position = currentpos();
+            if (tx.getInt(blk, position) == flag)
+                return true;
+            currentslot--;
+        }
+        return false;
+    }
+
+    //************************************************************************
+
+
+    /**
+     * Returns the integer value stored for the specified field of the current
+     * record.
      *
      * @param fldname the name of the field.
      * @return the integer stored in that field
@@ -68,8 +103,8 @@ public class RecordPage {
     }
 
     /**
-     * Returns the string value stored for the
-     * specified field of the current record.
+     * Returns the string value stored for the specified field of the current
+     * record.
      *
      * @param fldname the name of the field.
      * @return the string stored in that field
@@ -80,8 +115,7 @@ public class RecordPage {
     }
 
     /**
-     * Stores an integer at the specified field
-     * of the current record.
+     * Stores an integer at the specified field of the current record.
      *
      * @param fldname the name of the field
      * @param val     the integer value stored in that field
@@ -92,8 +126,7 @@ public class RecordPage {
     }
 
     /**
-     * Stores a string at the specified field
-     * of the current record.
+     * Stores a string at the specified field of the current record.
      *
      * @param fldname the name of the field
      * @param val     the string value stored in that field
@@ -104,10 +137,9 @@ public class RecordPage {
     }
 
     /**
-     * Deletes the current record.
-     * Deletion is performed by just marking the record
-     * as "deleted"; the current record does not change.
-     * To get to the next record, call next().
+     * Deletes the current record. Deletion is performed by just marking the record
+     * as "deleted"; the current record does not change. To get to the next record,
+     * call next().
      */
     public void delete() {
         int position = currentpos();
@@ -115,8 +147,8 @@ public class RecordPage {
     }
 
     /**
-     * Inserts a new, blank record somewhere in the page.
-     * Return false if there were no available slots.
+     * Inserts a new, blank record somewhere in the page. Return false if there were
+     * no available slots.
      *
      * @return false if the insertion was not possible
      */
@@ -131,8 +163,7 @@ public class RecordPage {
     }
 
     /**
-     * Sets the current record to be the record having the
-     * specified ID.
+     * Sets the current record to be the record having the specified ID.
      *
      * @param id the ID of the record within the page.
      */

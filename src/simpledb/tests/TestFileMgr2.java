@@ -48,7 +48,8 @@ public class TestFileMgr2 {
         Block bB = new Block("junkfile", 3);
         pB.write(bB);
 
-        filesize = fm.size("junkfile"); //filesize should be 4
+        //filesize should be 4
+        filesize = fm.size("junkfile");
         assert filesize == 4;
 
         // Method 2 using BOOLEAN2.java
@@ -61,7 +62,8 @@ public class TestFileMgr2 {
         Block bB2 = new Block("junkfile", 4);
         pB2.write(bB2);
 
-        filesize = fm.size("junkfile"); //filesize should be 5
+        //filesize should be 5
+        filesize = fm.size("junkfile");
         assert filesize == 5;
         //*******************************************************
 
@@ -71,14 +73,22 @@ public class TestFileMgr2 {
         //increment a designated integer
         Page p1 = new Page();
         p1.read(blk);
-        int n = p1.getInt(32);//read the int at offset 32
-        p1.setInt(32, n + 1);//add one to the int and rewrite it to the same offset
+
+        //read the int at offset 32
+        int n = p1.getInt(32);
+
+        //add one to the int and rewrite it to the same offset
+        p1.setInt(32, n + 1);
         p1.write(blk);
 
         //write a string to a designated location
         Page p2 = new Page();
-        p2.setString(20, "hello");//write the string to the designated offset
-        blk = p2.append("junkfile");//append the page to the file named junkfile
+
+        //write the string to the designated offset
+        p2.setString(20, "hello");
+
+        //append the page to the file named junkfile
+        blk = p2.append("junkfile");
 
         Page p3 = new Page();
         p3.read(blk);
@@ -90,8 +100,12 @@ public class TestFileMgr2 {
         System.out.println("\n*****************\nMy test cases");
         // BOOLEAN.java test case
         Page p4 = new Page();
-        p4.setBoolean(5, "t");//write the string to the designated offset
-        blk = p4.append("junkfile");//append the page to the file named junkfile
+
+        //write the string to the designated offset
+        p4.setBoolean(5, "t");
+
+        //append the page to the file named junkfile
+        blk = p4.append("junkfile");
 
         Page p5 = new Page();
         p5.read(blk);
@@ -100,13 +114,14 @@ public class TestFileMgr2 {
 
         // BOOLEAN2.java test case
         Page p6 = new Page();
-        p6.setBoolean(5, "t");//write the string to the designated offset
-        blk = p6.append("junkfile");//append the page to the file named junkfile
 
-        Page p7 = new Page();
-        p7.read(blk);
-        String ss2 = Boolean.toString(p7.getBoolean2(5).getValue().booleanValue());
-        System.out.println("Method2 : Block " + blk.number() + " contains " + ss2);
+        //write the string to the designated offset
+        p6.setBoolean(5, "t");
+
+        //append the page to the file named junkfile
+        blk = p6.append("junkfile");
+
+
         //***************************************************
 
         System.out.println("end of TestFileMgr");
